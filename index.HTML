@@ -1,0 +1,180 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Amine Studio
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Amine Studio
+   </h1>
+  </header>
+  <nav class="bg-gray-800 p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="block lg:hidden">
+     <button class="text-white focus:outline-none" id="nav-toggle">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+     <ul class="list-reset lg:flex justify-center flex-1 items-center">
+      <li class="mr-3">
+       <a class="inline-block py-2 px-4 text-white no-underline" href="#">
+        Home
+       </a>
+      </li>
+      <li class="mr-3">
+       <a class="inline-block py-2 px-4 text-white no-underline" href="#portfolio">
+        Portfolio
+       </a>
+      </li>
+      <li class="mr-3">
+       <a class="inline-block py-2 px-4 text-white no-underline" href="#about">
+        About
+       </a>
+      </li>
+      <li class="mr-3">
+       <a class="inline-block py-2 px-4 text-white no-underline" href="#services">
+        Services
+       </a>
+      </li>
+      <li class="mr-3">
+       <a class="inline-block py-2 px-4 text-white no-underline" href="#">
+        Blog
+       </a>
+      </li>
+      <li class="mr-3">
+       <a class="inline-block py-2 px-4 text-white no-underline" href="#contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+  <div class="hero">
+    <h1>I am<br><span class="typewrite" data-loop="yes" data-speed="100" data-delay="1000" data-words='["Amine", "a photographer","a visual artist"]'></span></h1>
+  </div>
+  <section id ="portfolio" class="portfolio">
+   <h2>
+    Portfolio
+   </h2>
+   <div class="categories">
+    <div class="category">
+        <a href="street.html" class="text-black no-underline hover:underline">
+            Street
+        </a>
+    </div>
+    <div class="category">
+        <a href="portraits.html" class="text-black no-underline hover:underline">
+            Portraits
+        </a>
+    </div>
+    <div class="category">
+        <a href="commercial.html" class="text-black no-underline hover:underline">
+            Commercial
+        </a>
+    </div>
+    <div class="category">
+        <a href="landscape.html" class="text-black no-underline hover:underline">
+            Landscape
+        </a>
+    </div>
+   </div>
+  </section>
+  <section id ="about" class="about">
+   <h2>
+    About Me
+   </h2>
+   <img alt="High-quality professional photo of the photographer" height="200" src="DSC_0196.JPG" width="200"/>
+   <p>
+    Hi, I'm Amine, a passionate photographer specializing in portraits, event and landscape photography. 
+    My photography journey started when I moved to Madrid and was captivated by the city's beauty. I began shooting with my brother’s camera and quickly became obsessed. Over time, I invested in my own gear, learned editing, and developed new skills. Now, I carry my camera everywhere to capture memorable moments through my lens.
+   </p>
+   <p>
+    I focus on Documentary Photography, Portraiture and Street Photography. I always make sure my clients feel relaxed and have fun during the session. I'm happy to listen to your ideas and suggestions as long as they fit with the theme we’re going for!
+   </p>
+   <div class="testimonials">
+    <h3>
+     What my clients say:
+    </h3>
+    <p>
+     "Amazing experience! [Client Name]"
+    </p>
+    <p>
+     "Truly talented and professional! [Client Name]"
+    </p>
+   </div>
+  </section>
+  <section id ="services" class="services">
+   <h2>
+    Services
+   </h2>
+   <img alt="Icon representing photography services" height="200" src="https://storage.googleapis.com/a1aa/image/GNVutfKGfmjBtEjbSeSVBffUuaiSeMSNFUjjXk2TqQ6RNhyfJA.jpg" width="200"/>
+   <p>
+    Street Photography: Capturing your special day with elegance and creativity.
+   </p>
+   <p>
+    Portrait Sessions: Personalized sessions to showcase your unique personality.
+   </p>
+   <p>
+    Landscape Photography: High-quality images to elevate your brand.
+   </p>
+   <p>
+    To book a session or inquire about pricing, please contact me via Email or Whatsapp.
+   </p>
+  </section>
+  <section id="contact"class="contact">
+   <h2>
+    Contact
+   </h2>
+   <p>
+    Email: your.email@example.com
+   </p>
+   <p>
+    Phone: +34 661112719
+   </p>
+   <div class="social">
+    <a href="https://www.instagram.com/amine_studio22/">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-facebook">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-pinterest">
+     </i>
+    </a>
+   </div>
+   <p>
+    Based in LPGC. Available for travel.
+   </p>
+  </section>
+  <footer>
+   <p>
+    © 2023 Amine. All rights reserved.
+   </p>
+  </footer>
+  <script>
+   document.getElementById('nav-toggle').onclick = function() {
+            var navContent = document.getElementById('nav-content');
+            if (navContent.classList.contains('hidden')) {
+                navContent.classList.remove('hidden');
+            } else {
+                navContent.classList.add('hidden');
+            }
+        };
+  </script>
+  <script src="typewriting-master/typewriting-master/typewriting.min.js"></script>
+ </body>
+</html>
