@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portraits | Amine Studio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Amine Studio</h1>
+    </header>
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white no-underline">Home</a>
+        </div>
+    </nav>
+    <main class="p-8">
+        <h2 class="text-center text-3xl font-bold mb-4">Portraits</h2>
+        <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <img src="photos/events/DSC_0056.JPG" alt="Wedding 1" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+            <img src="photos/events/DSC_0056.JPG" alt="Wedding 2" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+            <img src="photos/events/DSC_0056.JPG" alt="Wedding 3" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+            <img src="photos/events/DSC_0056.JPG" alt="Wedding 4" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+            <img src="photos/events/DSC_0056.JPG" alt="Wedding 5" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+            <img src="photos/events/DSC_0056.JPG" alt="Wedding 6" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Amine Studio. All rights reserved.</p>
+    </footer>
+    <!-- Modal -->
+    <div id="imageModal" class="flex">
+        <img id="modalImage" src="" alt="Enlarged Image">
+        <button onclick="closeModal()">&times;</button>
+    </div>
+
+    <script>
+        // Show the modal and display the clicked image
+        function showModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = img.src; // Set the modal image source to the clicked image
+            modal.style.display = 'flex'; // Display the modal
+        }
+
+        // Close the modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none'; // Hide the modal
+        }
+    </script>
+</body>
+</html>
