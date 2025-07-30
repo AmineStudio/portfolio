@@ -22,7 +22,7 @@ header {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('pictures/DSC_0221.JPG') no-repeat center center/cover;
+    background: url('../images/content/DSC_0221.JPG') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
