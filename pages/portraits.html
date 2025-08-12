@@ -2,56 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Portrait photography by Amine Studio - Professional portrait sessions capturing emotion and personality">
     <title>Portraits | Amine Studio</title>
+    
+    <!-- Preload resources -->
+    <link rel="preload" href="../assets/css/styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- External resources -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../src/output.css" rel="stylesheet">
     <link href="../assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
     <header>
         <h1>Amine Studio</h1>
     </header>
-    <nav id="nav-bar" class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="../index.HTML" class="text-white no-underline">Home</a>
-        </div>
-    </nav>
-    <main id="p-8" class="p-8">
-        <h2 class="text-center text-3xl font-bold mb-4">Portraits</h2>
+    
+   <nav id="nav-bar" class="sticky-nav bg-gray-800 p-4" aria-label="Main navigation">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="block lg:hidden">
+        <button class="text-white focus:outline-none" id="nav-toggle" aria-expanded="false" aria-controls="nav-content">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+        <ul class="list-reset lg:flex justify-center flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white no-underline hover:bg-gray-700 rounded transition" href="../index.HTML">
+              Home
+            </a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white no-underline hover:bg-gray-700 rounded transition" href="../index.HTML#portfolio">
+              Portfolio
+            </a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white no-underline hover:bg-gray-700 rounded transition" href="../index.HTML#About">
+              About
+            </a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white no-underline hover:bg-gray-700 rounded transition" href="../index.HTML#services">
+              Services
+            </a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white no-underline hover:bg-gray-700 rounded transition" href="../index.HTML#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    <main id="main-content" class="p-8">
+        <h1 class="text-center text-3xl font-bold mb-4">Portraits</h1>
         <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="../assets/images/gallery/portraits/DSC_0030.jpg" alt="Wedding 1" class="rounded shadow cursor-pointer" onclick="showModal(this)">
-            <img src="../assets/images/gallery/portraits/DSC_0049.jpg" alt="Wedding 2" class="rounded shadow cursor-pointer" onclick="showModal(this)">
-            <img src="../assets/images/gallery/portraits/DSC_0397.jpg" alt="Wedding 3" class="rounded shadow cursor-pointer" onclick="showModal(this)">
-            <img src="../assets/images/gallery/portraits/DSC_0329.JPG" alt="Wedding 4" class="rounded shadow cursor-pointer" onclick="showModal(this)">
-            <img src="../assets/images/gallery/portraits/DSC_0221.jpg" alt="Wedding 5" class="rounded shadow cursor-pointer" onclick="showModal(this)">
-            <img src="../assets/images/gallery/portraits/IMG_4288.jpg" alt="Wedding 6" class="rounded shadow cursor-pointer" onclick="showModal(this)">
+            <img src="../assets/images/gallery/portraits/DSC_0030.jpg" alt="Portrait 1" class="rounded shadow cursor-pointer gallery-image">
+            <img src="../assets/images/gallery/portraits/DSC_0049.jpg" alt="Portrait 2" class="rounded shadow cursor-pointer gallery-image">
+            <img src="../assets/images/gallery/portraits/DSC_0397.jpg" alt="Portrait 3" class="rounded shadow cursor-pointer gallery-image">
+            <img src="../assets/images/gallery/portraits/DSC_0329.JPG" alt="Portrait 4" class="rounded shadow cursor-pointer gallery-image">
+            <img src="../assets/images/gallery/portraits/DSC_0221.jpg" alt="Portrait 5" class="rounded shadow cursor-pointer gallery-image">
+            <img src="../assets/images/gallery/portraits/DSC_0027.jpg" alt="Portrait 6" class="rounded shadow cursor-pointer gallery-image">
         </div>
     </main>
+    
     <footer>
-        <p>© 2025 Amine Studio. All rights reserved.</p>
+        <p>© <span id="current-year">2025</span> Amine Studio. All rights reserved.</p>
     </footer>
+    
     <!-- Modal -->
-    <div id="imageModal" class="flex">
-        <img id="modalImage" src="" alt="Enlarged Image">
-        <button onclick="closeModal()">&times;</button>
-    </div>
+    <div id="imageModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <button id="modalClose">&times;</button>
+    <img id="modalImage" src="" alt="">
+  </div>
+  </div>
 
-    <script>
-        // Show the modal and display the clicked image
-        function showModal(img) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modalImg.src = img.src; // Set the modal image source to the clicked image
-            modal.style.display = 'flex'; // Display the modal
-        }
 
-        // Close the modal
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none'; // Hide the modal
-        }
-    </script>
+
+    <!-- External JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    
+    <noscript>
+        <div class="noscript-warning">
+            Please enable JavaScript for the best experience on this website.
+        </div>
+    </noscript>
+    
 </body>
 </html>
